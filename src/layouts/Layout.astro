@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -30,14 +31,13 @@
 		<!-- Global Header -->
 		<header class="site-header">
 			<div class="header-container">
-				<a href="/" class="logo">🇨🇭 SwissVote <span>EN</span></a>
+				<a href={base} class="logo">🇨🇭 SwissVote <span>EN</span></a>
 				<button id="theme-toggle" aria-label="Toggle Dark Mode">
 					<span class="icon-sun">☀️</span>
 					<span class="icon-moon">🌙</span>
 				</button>
 			</div>
 		</header>
-
 		<!-- Main Content (Pages get injected here) -->
 		<main>
 			<slot />

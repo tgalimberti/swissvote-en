@@ -1,10 +1,11 @@
 ---
 // src/components/MatterContent.astro
 const { title } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 <div class="matter-content-wrapper">
     <div class="back-link">
-        <a href="/">← Back to Voting Overview</a>
+        <a href={base}>← Back to Voting Overview</a>
     </div>
     <article class="voting-document">
         <slot />

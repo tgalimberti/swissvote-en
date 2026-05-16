@@ -1,5 +1,6 @@
 ---
 // src/components/BookletHero.astro
+const base = import.meta.env.BASE_URL;
 ---
 
 <div class="booklet-hero">
@@ -10,7 +11,7 @@
     </div>
 
     <!-- Row 2: First Matter -->
-    <a href="/matters/2026-06-14-federal-sustainability" class="booklet-row matter-link">
+    <a href={`${base}matters/2026-06-14-federal-sustainability`} class="booklet-row matter-link">
         <div class="booklet-label">First matter</div>
         <div class="booklet-title">
             <span class="matter-type">Popular initiative</span><br/>
@@ -20,7 +21,7 @@
     </a>
 
     <!-- Row 3: Second Matter -->
-    <a href="/matters/2026-06-14-federal-civil-service" class="booklet-row matter-link">
+    <a href={`${base}matters/2026-06-14-federal-civil-service`} class="booklet-row matter-link">
         <div class="booklet-label">Second matter</div>
         <div class="booklet-title">
             <span class="matter-type">Amendment to the law</span><br/>
