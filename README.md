@@ -1,4 +1,4 @@
-# 🇨🇭 SwissVote EN
+# 🇨🇭 [SwissVote EN](https://tgalimberti.github.io/swissvote-en/)
 
 An open-source, static archive providing English translations of Swiss voting materials.
 

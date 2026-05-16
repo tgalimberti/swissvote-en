@@ -6,8 +6,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>SwissVote EN</title>
-		
-		<!-- This script runs immediately to prevent the "white flash" in dark mode -->
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇨🇭</text></svg>">	
 		<script is:inline>
 			const theme = (() => {
 				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -96,7 +95,7 @@
 	}
 
 	main {
-		max-width: 900px; /* Same max-width as your provided HTML */
+		max-width: 900px; 
 		margin: 0 auto;
 		padding: 20px;
 	}
@@ -140,7 +139,6 @@
 		color: var(--text-color);
 	}
 
-	/* Hide the sun in light mode, hide the moon in dark mode */
 	html:not(.dark) .icon-sun { display: none; }
 	html.dark .icon-moon { display: none; }
 </style>
