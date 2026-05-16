@@ -1,0 +1,30 @@
+---
+// src/components/MatterContent.astro
+const { title } = Astro.props;
+---
+<div class="matter-content-wrapper">
+    <div class="back-link">
+        <a href="/">← Back to Voting Overview</a>
+    </div>
+    <article class="voting-document">
+        <slot />
+    </article>
+</div>
+
+<style>
+    .back-link {
+        margin-bottom: 20px;
+    }
+    .back-link a {
+        color: var(--swiss-red);
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .back-link a:hover {
+        text-decoration: underline;
+    }
+    .voting-document {
+        /* Any global overrides specifically for the injected markdown HTML */
+        font-size: 1.05rem;
+    }
+</style>

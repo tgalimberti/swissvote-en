@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import MatterContent from '../../components/MatterContent.astro';
+
+// 1. This tells Astro to find ALL the .md files in the matters folder and generate a route for them
+export async function getStaticPaths() {
+  const matters = await getCollection('matters');
+  return matters.map(matter => ({
+    params: { slug: matter.slug }, props: { matter },
+  }));
+}
+
+// 2. This grabs the specific document being requested
+const { matter } = Astro.props;
+const { Content } = await matter.render();
+---
+
+<Layout>
+    <MatterContent title={matter.data.title}>
+        <!-- This injects your full Civil Service Act HTML -->
+        <Content />
+    </MatterContent>
+</Layout>
