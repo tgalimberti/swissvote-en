@@ -10,6 +10,9 @@ const base = import.meta.env.BASE_URL;
         <div class="booklet-title date-title">14 June 2026</div>
     </div>
 
+    <!-- FEDERAL SECTION -->
+    <div class="section-divider">Federal Matters</div>
+
     <!-- Row 2: First Matter -->
     <a href={`${base}matters/2026-06-14-federal-sustainability`} class="booklet-row matter-link">
         <div class="booklet-label">First matter</div>
@@ -29,6 +32,29 @@ const base = import.meta.env.BASE_URL;
         </div>
         <div class="chevron">→</div>
     </a>
+
+    <!-- CANTONAL SECTION (TICINO) -->
+    <div class="section-divider cantonal">Cantonal Matters (Ticino)</div>
+
+    <!-- Row 4: First Matter (1st Cantonal) -->
+    <a href={`${base}matters/2026-06-14-cantonal-ti-dental-care`} class="booklet-row matter-link">
+        <div class="booklet-label">First matter</div>
+        <div class="booklet-title">
+            <span class="matter-type">Generic legislative popular initiative</span><br/>
+            «For the reimbursement of dental care»
+        </div>
+        <div class="chevron">→</div>
+    </a>
+
+    <!-- Row 5: Second Matter (2nd Cantonal) -->
+    <a href={`${base}matters/2026-06-14-cantonal-ti-valuations`} class="booklet-row matter-link">
+        <div class="booklet-label">Second matter</div>
+        <div class="booklet-title">
+            <span class="matter-type">Elaborated constitutional popular initiative</span><br/>
+            «Yes to the neutralization of the increase in real estate valuations»
+        </div>
+        <div class="chevron">→</div>
+    </a>
 </div>
 
 <style>
@@ -43,6 +69,7 @@ const base = import.meta.env.BASE_URL;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         display: flex;
         flex-direction: column;
+        overflow: hidden; 
     }
 
     .booklet-row {
@@ -63,6 +90,20 @@ const base = import.meta.env.BASE_URL;
     .date-title { font-size: 2.5rem; }
     .matter-type { font-size: 1.2rem; font-weight: normal; opacity: 0.9; }
     
+    /* Section Dividers */
+    .section-divider {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 10px 40px;
+        margin: 0 -40px; 
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+    }
+    .section-divider.cantonal {
+        margin-top: 15px;
+    }
+
     /* Interactive Link Styles */
     .chevron {
         display: flex;
@@ -92,11 +133,13 @@ const base = import.meta.env.BASE_URL;
     html.dark .booklet-row { border-bottom: 1px solid var(--border-color); }
     html.dark .booklet-label { color: var(--swiss-red); }
     html.dark a.matter-link:hover { background-color: rgba(255, 255, 255, 0.03); }
+    html.dark .section-divider { background-color: rgba(255, 255, 255, 0.05); }
 
     /* Mobile */
     @media (max-width: 600px) {
         .booklet-hero { padding: 20px; }
         .booklet-row { grid-template-columns: 1fr; gap: 5px; padding: 15px 0; }
+        .section-divider { padding: 10px 20px; margin: 0 -20px; }
         .chevron { display: none; }
         .date-title { font-size: 2rem; }
         .booklet-title { font-size: 1.3rem; }
