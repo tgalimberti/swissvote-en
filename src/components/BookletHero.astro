@@ -57,6 +57,37 @@ const base = import.meta.env.BASE_URL;
     </a>
 </div>
 
+<div class="booklet-hero">
+    <!-- Row 1: The Date -->
+    <div class="booklet-row booklet-header">
+        <div class="booklet-label">Popular vote</div>
+        <div class="booklet-title date-title">27 September 2026</div>
+    </div>
+
+    <!-- FEDERAL SECTION -->
+    <div class="section-divider">Federal Matters</div>
+
+    <!-- Row 2: First Matter -->
+    <a href={`${base}matters/2026-09-27-federal-neutrality/`} class="booklet-row matter-link">
+        <div class="booklet-label">First matter</div>
+        <div class="booklet-title">
+            <span class="matter-type">Popular initiative</span><br/>
+            «Safeguarding Swiss neutrality (Neutrality Initiative)»
+        </div>
+        <div class="chevron">→</div>
+    </a>
+
+    <!-- Row 3: Second Matter -->
+    <a href={`${base}matters/2026-09-27-federal-food/`} class="booklet-row matter-link">
+        <div class="booklet-label">Second matter</div>
+        <div class="booklet-title">
+            <span class="matter-type">Popular initiative</span><br/>
+            «For a secure food supply – through the strengthening of a sustainable national production, more plant-based foodstuffs and clean drinking water (Food Initiative)»
+        </div>
+        <div class="chevron">→</div>
+    </a>
+</div>
+
 <style>
     /* Light Mode */
     .booklet-hero {
